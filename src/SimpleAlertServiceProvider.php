@@ -2,10 +2,9 @@
 
 namespace CodeWithDennis\SimpleAlert;
 
-use Filament\Support\Assets\AlpineComponent;
+use CodeWithDennis\SimpleAlert\Commands\SimpleAlertCommand;
+use CodeWithDennis\SimpleAlert\Testing\TestsSimpleAlert;
 use Filament\Support\Assets\Asset;
-use Filament\Support\Assets\Css;
-use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Facades\FilamentIcon;
 use Illuminate\Filesystem\Filesystem;
@@ -13,8 +12,6 @@ use Livewire\Features\SupportTesting\Testable;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use CodeWithDennis\SimpleAlert\Commands\SimpleAlertCommand;
-use CodeWithDennis\SimpleAlert\Testing\TestsSimpleAlert;
 
 class SimpleAlertServiceProvider extends PackageServiceProvider
 {
@@ -58,7 +55,9 @@ class SimpleAlertServiceProvider extends PackageServiceProvider
         }
     }
 
-    public function packageRegistered(): void {}
+    public function packageRegistered(): void
+    {
+    }
 
     public function packageBooted(): void
     {
@@ -78,7 +77,7 @@ class SimpleAlertServiceProvider extends PackageServiceProvider
 
         // Handle Stubs
         if (app()->runningInConsole()) {
-            foreach (app(Filesystem::class)->files(__DIR__ . '/../stubs/') as $file) {
+            foreach (app(Filesystem::class)->files(__DIR__.'/../stubs/') as $file) {
                 $this->publishes([
                     $file->getRealPath() => base_path("stubs/filament-simple-alert/{$file->getFilename()}"),
                 ], 'filament-simple-alert-stubs');
@@ -101,8 +100,8 @@ class SimpleAlertServiceProvider extends PackageServiceProvider
     {
         return [
             // AlpineComponent::make('filament-simple-alert', __DIR__ . '/../resources/dist/components/filament-simple-alert.js'),
-            Css::make('filament-simple-alert-styles', __DIR__ . '/../resources/dist/filament-simple-alert.css'),
-            Js::make('filament-simple-alert-scripts', __DIR__ . '/../resources/dist/filament-simple-alert.js'),
+//            Css::make('filament-simple-alert', __DIR__.'/../resources/dist/filament-simple-alert.css'),
+//            Js::make('filament-simple-alert-scripts', __DIR__ . '/../resources/dist/filament-simple-alert.js'),
         ];
     }
 
