@@ -4,6 +4,7 @@ namespace CodeWithDennis\SimpleAlert\Tests;
 
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
+use CodeWithDennis\SimpleAlert\SimpleAlertServiceProvider;
 use Filament\Actions\ActionsServiceProvider;
 use Filament\FilamentServiceProvider;
 use Filament\Forms\FormsServiceProvider;
@@ -16,7 +17,6 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
-use CodeWithDennis\SimpleAlert\SimpleAlertServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -25,7 +25,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'CodeWithDennis\\SimpleAlert\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
+            fn (string $modelName) => 'CodeWithDennis\\SimpleAlert\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
