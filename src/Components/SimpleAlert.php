@@ -5,7 +5,7 @@ namespace CodeWithDennis\SimpleAlert\Components;
 use Closure;
 use Filament\Infolists\Components\Entry;
 
-class SimpleAlertEntry extends Entry
+class SimpleAlert extends Entry
 {
     protected string $view = 'filament-simple-alert::simple-alert-entry';
 
@@ -48,6 +48,7 @@ class SimpleAlertEntry extends Entry
 
     public function success(): static
     {
+        $this->type = 'success';
         $this->icon = 'heroicon-s-check-circle';
 
         return $this;

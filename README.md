@@ -39,7 +39,7 @@ You can add a title to the alert by using the `title` method:
 
 ```php
 SimpleAlertEntry::make()
-    ->title('This is the title')
+    ->title('Hoorraayy! Your request has been approved! 🎉')
 ```
 
 ### Description
@@ -95,11 +95,19 @@ SimpleAlertEntry::make()
 SimpleAlertEntry::make()
     ->success()
     ->title(new HtmlString('<strong>Hoorraayy! Your request has been approved! 🎉</strong>'))
-     ->description('Lorem ipsum dolor sit amet consectetur adipisicing elit.')
+    ->description('Lorem ipsum dolor sit amet consectetur adipisicing elit.')
     ->link('https://filamentphp.com')
     ->linkLabel('Read more!')
     ->linkBlank(),
 ```
+
+### Screenshots
+
+![success](resources/screenshots/success.png)
+![danger](resources/screenshots/danger.png)
+![info](resources/screenshots/info.png)
+![warning](resources/screenshots/warning.png)
+![info](resources/screenshots/info-with-link.png)
 
 ## Contributing
 
