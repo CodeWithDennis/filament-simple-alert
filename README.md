@@ -106,7 +106,7 @@ SimpleAlert::make()
     ->linkLabel('Read more!'),
 ```
 
-If you would like the link to open in a new tab, you can use the `blank` method.
+If you would like the link to open in a new tab, you can use the `linkBlank` method.
 
 ```php
 use CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert;
