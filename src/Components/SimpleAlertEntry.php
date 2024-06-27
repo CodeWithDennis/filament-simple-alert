@@ -5,9 +5,9 @@ namespace CodeWithDennis\SimpleAlert\Components;
 use Closure;
 use Filament\Infolists\Components\Entry;
 
-class SimpleAlert extends Entry
+class SimpleAlertEntry extends Entry
 {
-    protected string $view = 'filament-simple-alert::simple-alert-entry';
+    protected string $view = 'filament-simple-alert::simple-alert';
 
     protected string $type = 'gray';
 
