@@ -95,7 +95,7 @@ SimpleAlert::make()
     ->link('https://filamentphp.com'),
 ```
 
-If you would like the link to customize the link label, you can use the `linkLabel` method.
+If you would like to customize the link label, you can use the `linkLabel` method.
 
 ```php
 use CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert;
