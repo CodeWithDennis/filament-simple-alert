@@ -101,7 +101,7 @@ SimpleAlertEntry::make()
     ->linkBlank(),
 ```
 
-### Screenshot
+### Screenshots
 
 ![light](resources/screenshots/light.png)
 ![dark](resources/screenshots/dark.png)
