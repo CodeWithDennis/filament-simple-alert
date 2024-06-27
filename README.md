@@ -14,31 +14,18 @@ You can install the package via composer:
 composer require codewithdennis/filament-simple-alert
 ```
 
-Make sure you add the following to your `tailwind.config.js` file.
+Make sure you add the following to your `tailwind.config.js file.
 
-```php
+```bash
 './vendor/codewithdennis/filament-simple-alert/resources/**/*.blade.php',
 ```
 
 ## Usage
 
-The
-alerts
-can
-be
-used in your`infolists`
-or`forms`, make
-sure
-you
-pick
-the
-right
-component.
+The alerts can be used in your `infolists` or `forms`, make sure you pick the right component.
 
-    ```php
-
+```php
 use CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert;
-
 ```
 
 ```php
