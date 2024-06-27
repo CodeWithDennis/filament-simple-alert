@@ -1,15 +1,15 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace CodeWithDennis\SimpleAlert;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 
-class SkeletonPlugin implements Plugin
+class SimpleAlertPlugin implements Plugin
 {
     public function getId(): string
     {
-        return 'skeleton';
+        return 'filament-simple-alert';
     }
 
     public function register(Panel $panel): void
