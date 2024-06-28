@@ -7,7 +7,7 @@
 This package offers a straightforward and easy-to-use alert component for your Filament application. It allows you to quickly implement customizable alert messages, enhancing the user experience by
 providing clear and concise notifications.
 
-![Simple Alert](resources/screenshots/thumbnail.png)
+![Simple Alert](https://github.com/CodeWithDennis/filament-simple-alert/raw/main/resources/screenshots/thumbnail.png)
 
 ## Installation
 
@@ -142,8 +142,8 @@ SimpleAlert::make()
 
 ### Screenshots
 
-![light](resources/screenshots/light.png)
-![dark](resources/screenshots/dark.png)
+![light](https://github.com/CodeWithDennis/filament-simple-alert/raw/main/resources/screenshots/light.png)
+![dark](https://github.com/CodeWithDennis/filament-simple-alert/raw/main/resources/screenshots/dark.png)
 
 ## Contributing
 
