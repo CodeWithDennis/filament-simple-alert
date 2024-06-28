@@ -8,7 +8,7 @@ trait HasTitle
 {
     protected Closure|string|null $title = null;
 
-    public function title(Closure|string $title): static
+    public function title(Closure|string|null $title): static
     {
         $this->title = $title;
 

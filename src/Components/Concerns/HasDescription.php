@@ -8,7 +8,7 @@ trait HasDescription
 {
     protected Closure|string|null $description = null;
 
-    public function description(Closure|string $description): static
+    public function description(Closure|string|null $description): static
     {
         $this->description = $description;
 
