@@ -4,7 +4,7 @@ namespace CodeWithDennis\SimpleAlert\Components\Concerns;
 
 use Closure;
 
-trait Haslink
+trait HasLink
 {
     protected Closure|string|null $link = null;
 
