@@ -6,7 +6,7 @@ use Closure;
 
 trait HasColor
 {
-    protected string $color = 'gray';
+    protected Closure|string $color = 'gray';
 
     public function color(Closure|string $color): static
     {
