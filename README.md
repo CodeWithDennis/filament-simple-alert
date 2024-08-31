@@ -23,20 +23,9 @@ Make sure you add the following to your `tailwind.config.js file.
 './vendor/codewithdennis/filament-simple-alert/resources/**/*.blade.php',
 ```
 
-### Installing on a project with Tailwind already setup?
+### Installing on a project with Tailwind already set up?
 
-If you have installed filament into an existing project with Tailwind as part of it then you will need to follow these additonal steps to ensure the styles are applied correctly.
-
-First, you should follow the instructions for setting up a custom theme within filament [here](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme
-). This will then output separate CSS for filament.
-
-Once you have done that, you can then register the new CSS file inside you service provider for the panel.
-```
-->viteTheme('resources/css/filament/{theme-name}/theme.css')
-```
-You should notice that along with the new CSS file there is also another `tailwin.config.js` file, add in './vendor/codewithdennis/filament-simple-alert/resources/**/*.blade.php', to `resources/css/filament/{theme-name}/tailwind.config.js`
-
-Finally run `npm run dev` and you're good to go.
+If you have installed filament into an existing project with Tailwind as part of it then you will need to [publish a custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme for the styles to be applied correctly.
 
 ## Usage
 
