@@ -23,6 +23,10 @@ Make sure you add the following to your `tailwind.config.js file.
 './vendor/codewithdennis/filament-simple-alert/resources/**/*.blade.php',
 ```
 
+### Installing on a project with Tailwind already set up?
+
+If you have installed filament into an existing project with Tailwind as part of it then you will need to [publish a custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme for the styles to be applied correctly.
+
 ## Usage
 
 The alerts can be used in your `infolists` or `forms`, make sure you pick the right component.
