@@ -25,6 +25,7 @@ class SimpleAlert extends Field
     {
         parent::setUp();
 
-        $this->hiddenLabel();
+        $this->dehydrated(false)
+            ->hiddenLabel();
     }
 }
