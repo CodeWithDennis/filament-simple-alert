@@ -96,52 +96,42 @@ SimpleAlert::make()
     ->description('This is the description')
 ```
 
-### Link
+### Actions
 
-You can also add a link to the alert by using the `link` method.
-
-```php
-use CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert;
-
-SimpleAlert::make()
-    ->info()
-    ->link('https://filamentphp.com'),
-```
-
-If you would like to customize the link label, you can use the `linkLabel` method.
+You can also add actions to the alert by using the `actions` method. All regular action features are supported.
 
 ```php
 use CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert;
+use Filament\Forms\Components\Actions;
 
 SimpleAlert::make()
     ->info()
-    ->link('https://filamentphp.com')
-    ->linkLabel('Read more!'),
-```
-
-If you would like the link to open in a new tab, you can use the `linkBlank` method.
-
-```php
-use CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert;
-
-SimpleAlert::make()
-    ->info()
-    ->link('https://filamentphp.com')
-    ->linkBlank(),
+    ->actions([
+        Action::make('filament')
+        ->label('Read more')
+        ->url('https://filamentphp.com')
+        ->openUrlInNewTab()
+        ->color('info'),
+    ]),
 ```
 
 ### Example
 
 ```php
 use CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert;
+use Filament\Forms\Components\Actions;
 
 SimpleAlert::make()
     ->success()
     ->title(new HtmlString('<strong>Hoorraayy! Your request has been approved! 🎉</strong>'))
     ->description('Lorem ipsum dolor sit amet consectetur adipisicing elit.')
-    ->link('https://filamentphp.com')
-    ->linkLabel('Read more!')
-    ->linkBlank(),
+    ->actions([
+        Actions\Action::make('filament')
+        ->label('Read more')
+        ->url('https://filamentphp.com')
+        ->openUrlInNewTab()
+        ->color('info'),
+    ]),
 ```
 
 ### Screenshots
