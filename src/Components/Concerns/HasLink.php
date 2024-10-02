@@ -12,6 +12,9 @@ trait HasLink
 
     protected Closure|bool|null $linkBlank = false;
 
+    /**
+     * @deprecated Use `actions()` instead.
+     */
     public function link(Closure|string $link): static
     {
         $this->link = $link;

@@ -6,6 +6,7 @@
    'link' => null,
    'linkLabel' => null,
    'linkBlank' => false,
+   'actions' => null,
 ])
 
 @php
@@ -38,14 +39,26 @@
                     {!! $description !!}
                 </p>
             </div>
-            @if($link)
-                <p class="mt-3 text-sm md:ml-6 md:mt-0 self-center">
-                    <a href="{{ $link }}" {{ $linkBlank ? 'target="_blank"' : '' }} class="whitespace-nowrap font-medium text-custom-400 hover:text-custom-500">
-                        {{ $linkLabel }}
-                        <span aria-hidden="true"> &rarr;</span>
-                    </a>
-                </p>
-            @endif
+            <div class="flex gap-x-3 items-center">
+                @if($link)
+                    <p class="text-sm md:ml-6 md:mt-0 self-center">
+                        <a href="{{ $link }}" {{ $linkBlank ? 'target="_blank"' : '' }} class="whitespace-nowrap font-medium text-custom-400 hover:text-custom-500">
+                            {{ $linkLabel }}
+                            <span aria-hidden="true"> &rarr;</span>
+                        </a>
+                    </p>
+                @endif
+
+                @if($actions)
+                    <div class="md:ml-6 gap-3 flex items-center justify-start">
+                        @foreach ($actions as $action)
+                            @if ($action->isVisible())
+                                {{ $action }}
+                            @endif
+                        @endforeach
+                    </div>
+                @endif
+            </div>
         </div>
     </div>
 </div>
