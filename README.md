@@ -125,13 +125,14 @@ SimpleAlert::make()
     ->success()
     ->title(new HtmlString('<strong>Hoorraayy! Your request has been approved! 🎉</strong>'))
     ->description('Lorem ipsum dolor sit amet consectetur adipisicing elit.')
-    ->actions([
-        Actions\Action::make('filament')
-        ->label('Read more')
+     Action::make('filament')
+        ->label('Details')
+        ->icon('heroicon-m-arrow-long-right')
+        ->iconPosition(IconPosition::After)
+        ->link()
         ->url('https://filamentphp.com')
         ->openUrlInNewTab()
-        ->color('info'),
-    ]),
+        ->color('success'),
 ```
 
 ### Screenshots
