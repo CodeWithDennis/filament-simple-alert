@@ -3,17 +3,12 @@
 namespace CodeWithDennis\SimpleAlert\Tests\Resources\DummyResource\Pages;
 
 use CodeWithDennis\SimpleAlert\Tests\Resources\DummyResource;
-use Filament\Forms\Form;
 use Filament\Infolists\Infolist;
-use Filament\Resources\Pages\CreateRecord;
 use Filament\Resources\Pages\ViewRecord;
 
 class ViewDummy extends ViewRecord
 {
     protected static string $resource = DummyResource::class;
-
-
-
 
     public function infolist(Infolist $infolist): Infolist
     {
@@ -23,14 +18,14 @@ class ViewDummy extends ViewRecord
         $defaultColor = 'gray';
         $defaultLink = null;
         $defaultLinkLabel = 'Details';
-        
+
         return $infolist
             ->schema([
                 \CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert::make('alert_only_title')
                     ->title($defaultTitle),
 
                 \CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert::make('alert_only_title_closure')
-                    ->title(fn () =>$defaultTitle),
+                    ->title(fn () => $defaultTitle),
 
                 \CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert::make('alert_only_description')
                     ->description($defaultDescription),
@@ -77,7 +72,6 @@ class ViewDummy extends ViewRecord
                     ->link('https://filamentphp.com/docs')
                     ->linkLabel('Visit Filament Doscs'),
 
-
                 \CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert::make('alert_simple_danger')
                     ->title($defaultTitle)
                     ->danger(),
@@ -95,5 +89,4 @@ class ViewDummy extends ViewRecord
                     ->warning(),
             ]);
     }
-
 }

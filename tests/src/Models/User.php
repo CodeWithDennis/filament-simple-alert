@@ -2,7 +2,6 @@
 
 namespace CodeWithDennis\SimpleAlert\Tests\Models;
 
-
 use CodeWithDennis\SimpleAlert\Tests\Database\Factories\UserFactory;
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Panel;

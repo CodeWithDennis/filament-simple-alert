@@ -1,5 +1,5 @@
 <?php
 
-    use CodeWithDennis\SimpleAlert\Tests\TestCase;
+use CodeWithDennis\SimpleAlert\Tests\TestCase;
 
-    uses(TestCase::class)->in(__DIR__);
+uses(TestCase::class)->in(__DIR__);

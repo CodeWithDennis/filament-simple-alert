@@ -5,7 +5,6 @@ namespace CodeWithDennis\SimpleAlert\Tests\Resources;
 use CodeWithDennis\SimpleAlert\Components\Forms\SimpleAlert;
 use CodeWithDennis\SimpleAlert\Tests\Models\Dummy;
 use CodeWithDennis\SimpleAlert\Tests\Resources\DummyResource\Pages;
-use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Infolists\Infolist;
 use Filament\Resources\Resource;
@@ -30,7 +29,7 @@ class DummyResource extends Resource
         return $infolist
             ->schema([
                 \CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert::make('alert_only_title')
-                    ->title($defaultTitle)
+                    ->title($defaultTitle),
             ]);
     }
 
@@ -49,7 +48,7 @@ class DummyResource extends Resource
                     ->title($defaultTitle),
 
                 SimpleAlert::make('alert_only_title_closure')
-                    ->title(fn () =>$defaultTitle),
+                    ->title(fn () => $defaultTitle),
 
                 SimpleAlert::make('alert_only_description')
                     ->description($defaultDescription),
@@ -95,7 +94,6 @@ class DummyResource extends Resource
                     ->title($defaultTitle)
                     ->link('https://filamentphp.com')
                     ->linkLabel('Visit Filament'),
-
 
                 SimpleAlert::make('alert_simple_danger')
                     ->title($defaultTitle)

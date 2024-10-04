@@ -28,8 +28,8 @@ class SimpleAlertServiceProvider extends PackageServiceProvider
 
     public function packageBooted(): void
     {
-          // Testing
-        Testable::mixin(new TestsSimpleAlert());
+        // Testing
+        Testable::mixin(new TestsSimpleAlert);
     }
 
     protected function getAssetPackageName(): ?string

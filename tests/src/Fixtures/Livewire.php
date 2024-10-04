@@ -2,7 +2,6 @@
 
 namespace CodeWithDennis\SimpleAlert\Tests\Fixtures;
 
-
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Livewire\Component;
