@@ -14,15 +14,6 @@ on:
       - 'phpunit.xml.dist'
       - 'composer.json'
       - 'composer.lock'
-  push:
-    branches:
-      - bring-back-tests
-    paths:
-      - '**.php'
-      - '.github/workflows/tests.yml'
-      - 'phpunit.xml.dist'
-      - 'composer.json'
-      - 'composer.lock'
 
 jobs:
   test:
