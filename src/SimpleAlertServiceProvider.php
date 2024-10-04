@@ -2,6 +2,8 @@
 
 namespace CodeWithDennis\SimpleAlert;
 
+use CodeWithDennis\SimpleAlert\Testing\TestsSimpleAlert;
+use Livewire\Features\SupportTesting\Testable;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -22,6 +24,12 @@ class SimpleAlertServiceProvider extends PackageServiceProvider
         if (file_exists($package->basePath('/../resources/views'))) {
             $package->hasViews(static::$viewNamespace);
         }
+    }
+
+    public function packageBooted(): void
+    {
+          // Testing
+        Testable::mixin(new TestsSimpleAlert());
     }
 
     protected function getAssetPackageName(): ?string
