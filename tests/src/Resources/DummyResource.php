@@ -16,7 +16,7 @@ class DummyResource extends Resource
     protected static ?string $model = Dummy::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-    
+
     public static function form(Form $form): Form
     {
         $defaultTitle = 'Hoorraayy! Your request has been approved! 🎉';
