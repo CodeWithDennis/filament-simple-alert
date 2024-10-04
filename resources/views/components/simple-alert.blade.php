@@ -1,11 +1,11 @@
 @props([
-   'icon' => null,
-   'color' => null,
-   'title' => null,
-   'description' => null,
-   'link' => null,
-   'linkLabel' => null,
-   'linkBlank' => false,
+    'color' => null,
+    'description' => null,
+    'icon' => null,
+    'link' => null,
+    'linkBlank' => false,
+    'linkLabel' => null,
+    'title' => null,
 ])
 
 @php
