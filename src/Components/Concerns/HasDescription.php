@@ -7,7 +7,7 @@ use Illuminate\Contracts\Support\Htmlable;
 
 trait HasDescription
 {
-    protected string | Htmlable | Closure | null $description = null;
+    public string | Htmlable | Closure | null $description = null;
 
     public function description(string | Htmlable | Closure | null $description): static
     {
