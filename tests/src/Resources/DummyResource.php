@@ -7,6 +7,7 @@ use CodeWithDennis\SimpleAlert\Tests\Models\Dummy;
 use CodeWithDennis\SimpleAlert\Tests\Resources\DummyResource\Pages;
 use Filament\Forms;
 use Filament\Forms\Form;
+use Filament\Infolists\Infolist;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -16,6 +17,22 @@ class DummyResource extends Resource
     protected static ?string $model = Dummy::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+
+    public static function infolist(Infolist $infolist): Infolist
+    {
+        $defaultTitle = 'Hoorrsaayy! Your request has been approved! 🎉';
+        $defaultDescription = 'Your request has been approved. You can now access the content.';
+        $defaultIcon = 'heroicon-o-check-circle';
+        $defaultColor = 'gray';
+        $defaultLink = null;
+        $defaultLinkLabel = 'Details';
+
+        return $infolist
+            ->schema([
+                \CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert::make('alert_only_title')
+                    ->title($defaultTitle)
+            ]);
+    }
 
     public static function form(Form $form): Form
     {
@@ -133,6 +150,7 @@ class DummyResource extends Resource
         return [
             'index' => Pages\ListDummies::route('/'),
             'create' => Pages\CreateDummy::route('/create'),
+            'view' => Pages\ViewDummy::route('/{record}'),
             'edit' => Pages\EditDummy::route('/{record}/edit'),
         ];
     }
