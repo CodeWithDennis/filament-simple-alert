@@ -3,19 +3,20 @@
 namespace CodeWithDennis\SimpleAlert\Components\Concerns;
 
 use Closure;
+use Illuminate\Contracts\Support\Htmlable;
 
 trait HasDescription
 {
-    protected Closure|string|null $description = null;
+    protected string | Htmlable | Closure | null $description = null;
 
-    public function description(Closure|string|null $description): static
+    public function description(string | Htmlable | Closure | null $description): static
     {
         $this->description = $description;
 
         return $this;
     }
 
-    public function getDescription(): ?string
+    public function getDescription(): string | Htmlable | null
     {
         return $this->evaluate($this->description);
     }
