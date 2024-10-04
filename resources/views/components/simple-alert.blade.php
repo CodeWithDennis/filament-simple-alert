@@ -30,14 +30,20 @@
             </div>
         @endif
         <div class="ml-3 flex-1 md:flex md:justify-between">
-            <div>
-                <p class="text-sm font-medium text-custom-800 dark:text-white">
-                    {!! $title !!}
-                </p>
-                <p class="text-sm text-custom-700 dark:text-white">
-                    {!! $description !!}
-                </p>
-            </div>
+            @if($title || $description)
+                <div>
+                    @if($title)
+                        <p class="text-sm font-medium text-custom-800 dark:text-white">
+                            {{ $title }}
+                        </p>
+                    @endif
+                    @if($description)
+                        <p class="text-sm text-custom-700 dark:text-white">
+                            {{ $description }}
+                        </p>
+                    @endif
+                </div>
+            @endif
             @if($link)
                 <p class="mt-3 text-sm md:ml-6 md:mt-0 self-center">
                     <a href="{{ $link }}" {{ $linkBlank ? 'target="_blank"' : '' }} class="whitespace-nowrap font-medium text-custom-400 hover:text-custom-500">
