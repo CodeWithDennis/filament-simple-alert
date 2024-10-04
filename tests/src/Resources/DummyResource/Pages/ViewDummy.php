@@ -70,7 +70,7 @@ class ViewDummy extends ViewRecord
                 \CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert::make('alert_title_link_linkLabel')
                     ->title($defaultTitle)
                     ->link('https://filamentphp.com/docs')
-                    ->linkLabel('Visit Filament Doscs'),
+                    ->linkLabel('Visit Filament Docs'),
 
                 \CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert::make('alert_simple_danger')
                     ->title($defaultTitle)
