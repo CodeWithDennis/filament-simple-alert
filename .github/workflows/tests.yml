@@ -16,7 +16,7 @@ on:
       - 'composer.lock'
   push:
     branches:
-      - 'bring-back-tests'
+      - bring-back-tests
     paths:
       - '**.php'
       - '.github/workflows/tests.yml'
