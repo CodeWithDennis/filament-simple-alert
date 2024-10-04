@@ -25,7 +25,7 @@
             <div class="flex-shrink-0 self-center">
                 <x-filament::icon
                         icon="{{ $icon }}"
-                        class="h-5 w-5 h-5 w-5 text-custom-400"
+                        class="h-5 w-5 text-custom-400"
                 />
             </div>
         @endif
