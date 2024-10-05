@@ -2,6 +2,7 @@
 
 namespace CodeWithDennis\SimpleAlert\Components\Forms;
 
+use Closure;
 use CodeWithDennis\SimpleAlert\Components\Concerns\HasColor;
 use CodeWithDennis\SimpleAlert\Components\Concerns\HasDescription;
 use CodeWithDennis\SimpleAlert\Components\Concerns\HasIcon;
@@ -20,6 +21,13 @@ class SimpleAlert extends Field
     use HasTitle;
 
     protected string $view = 'filament-simple-alert::components.simple-alert-field';
+
+    public function actions(array|Closure $actions): static
+    {
+        $this->actions = $actions;
+
+        return $this;
+    }
 
     protected function setUp(): void
     {
