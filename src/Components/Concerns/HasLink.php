@@ -12,6 +12,9 @@ trait HasLink
 
     protected Closure|bool|null $linkBlank = false;
 
+    /**
+     * @deprecated Use `actions()` instead.
+     */
     public function link(Closure|string $link): static
     {
         $this->link = $link;
@@ -19,6 +22,9 @@ trait HasLink
         return $this;
     }
 
+    /**
+     * @deprecated Use `actions()` instead.
+     */
     public function linkLabel(Closure|string $linkLabel): static
     {
         $this->linkLabel = $linkLabel;
@@ -26,6 +32,9 @@ trait HasLink
         return $this;
     }
 
+    /**
+     * @deprecated Use `actions()` instead.
+     */
     public function linkBlank(Closure|string $linkBlank): static
     {
         $this->linkBlank = $linkBlank;
