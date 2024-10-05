@@ -104,14 +104,17 @@ You can also add actions to the alert by using the `actions` method. All regular
 use CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert;
 use Filament\Forms\Components\Actions;
 
-SimpleAlert::make()
-    ->info()
+SimpleAlert::make('alert-example')
+    ->columnSpanFull()
+    ->success()
+    ->title('Simple Alert')
+    ->description('This is an example of a simple alert.')
     ->actions([
-        Action::make('filament')
-        ->label('Read more')
-        ->url('https://filamentphp.com')
-        ->openUrlInNewTab()
-        ->color('info'),
+        Forms\Components\Actions\Action::make('read-example')
+            ->label('Read more')
+            ->url('https://filamentphp.com')
+            ->openUrlInNewTab()
+            ->color('info'),
     ]),
 ```
 
