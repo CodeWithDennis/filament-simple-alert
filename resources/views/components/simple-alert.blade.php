@@ -53,6 +53,15 @@
                     </a>
                 </p>
             @endif
+            @if($actions)
+                <div class="md:ml-6 gap-3 flex items-center justify-start">
+                    @foreach ($actions as $action)
+                        @if ($action->isVisible())
+                            {{ $action }}
+                        @endif
+                    @endforeach
+                </div>
+            @endif
         </div>
     </div>
 </div>
