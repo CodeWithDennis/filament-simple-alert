@@ -46,7 +46,7 @@ There are 4 types of simple alerts: `danger`, `info`, `success`, and `warning`.
 ```php
 use CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert;
 
-SimpleAlert::make()
+SimpleAlert::make('example')
     ->danger()
     ->info()
     ->success()
@@ -58,7 +58,7 @@ If you would like to use a [different color](https://filamentphp.com/docs/3.x/su
 ```php
 use CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert;
 
-SimpleAlert::make()
+SimpleAlert::make('example')
     ->color('purple')
 ```
 
@@ -69,7 +69,7 @@ By default, all simple alerts will have an icon. If you would like to change the
 ```php
 use CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert;
 
-SimpleAlert::make()
+SimpleAlert::make('example')
     ->color('purple')
     ->icon('heroicon-s-users')
 ```
@@ -81,7 +81,7 @@ You can add a title to the alert by using the `title` method.
 ```php
 use CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert;
 
-SimpleAlert::make()
+SimpleAlert::make('example')
     ->title('Hoorraayy! Your request has been approved! 🎉')
 ```
 
@@ -92,7 +92,7 @@ You can add a description to the alert by using the `description` method.
 ```php
 use CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert;
 
-SimpleAlert::make()
+SimpleAlert::make('example')
     ->description('This is the description')
 ```
 
@@ -104,13 +104,13 @@ You can also add actions to the alert by using the `actions` method. All regular
 use CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert;
 use Filament\Forms\Components\Actions;
 
-SimpleAlert::make('alert-example')
+SimpleAlert::make('example')
     ->columnSpanFull()
     ->success()
     ->title('Simple Alert')
     ->description('This is an example of a simple alert.')
     ->actions([
-        Forms\Components\Actions\Action::make('read-example')
+        Action::make('read-example')
             ->label('Read more')
             ->url('https://filamentphp.com')
             ->openUrlInNewTab()
@@ -124,18 +124,20 @@ SimpleAlert::make('alert-example')
 use CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert;
 use Filament\Forms\Components\Actions;
 
-SimpleAlert::make()
+SimpleAlert::make('example')
     ->success()
     ->title(new HtmlString('<strong>Hoorraayy! Your request has been approved! 🎉</strong>'))
     ->description('Lorem ipsum dolor sit amet consectetur adipisicing elit.')
-     Action::make('filament')
-        ->label('Details')
-        ->icon('heroicon-m-arrow-long-right')
-        ->iconPosition(IconPosition::After)
-        ->link()
-        ->url('https://filamentphp.com')
-        ->openUrlInNewTab()
-        ->color('success'),
+    ->actions([
+         Action::make('filament')
+            ->label('Details')
+            ->icon('heroicon-m-arrow-long-right')
+            ->iconPosition(IconPosition::After)
+            ->link()
+            ->url('https://filamentphp.com')
+            ->openUrlInNewTab()
+            ->color('success'),
+    ]),
 ```
 
 ### Screenshots
