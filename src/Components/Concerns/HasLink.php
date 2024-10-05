@@ -22,6 +22,9 @@ trait HasLink
         return $this;
     }
 
+    /**
+     * @deprecated Use `actions()` instead.
+     */
     public function linkLabel(Closure|string $linkLabel): static
     {
         $this->linkLabel = $linkLabel;
@@ -29,6 +32,9 @@ trait HasLink
         return $this;
     }
 
+    /**
+     * @deprecated Use `actions()` instead.
+     */
     public function linkBlank(Closure|string $linkBlank): static
     {
         $this->linkBlank = $linkBlank;
