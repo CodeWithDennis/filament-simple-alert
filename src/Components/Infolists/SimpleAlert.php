@@ -2,6 +2,7 @@
 
 namespace CodeWithDennis\SimpleAlert\Components\Infolists;
 
+use Closure;
 use CodeWithDennis\SimpleAlert\Components\Concerns\HasColor;
 use CodeWithDennis\SimpleAlert\Components\Concerns\HasDescription;
 use CodeWithDennis\SimpleAlert\Components\Concerns\HasIcon;
@@ -20,6 +21,13 @@ class SimpleAlert extends Entry
     use HasTitle;
 
     protected string $view = 'filament-simple-alert::components.simple-alert-entry';
+
+    public function actions(array|Closure $actions): static
+    {
+        $this->actions = $actions;
+
+        return $this;
+    }
 
     protected function setUp(): void
     {
