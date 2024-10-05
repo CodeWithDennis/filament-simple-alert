@@ -14,13 +14,13 @@ use Filament\Forms\Components\Field;
 
 class SimpleAlert extends Field
 {
+    use HasBorder;
     use HasColor;
     use HasDescription;
     use HasIcon;
     use HasLink;
     use HasSimple;
     use HasTitle;
-    use HasBorder;
 
     protected string $view = 'filament-simple-alert::components.simple-alert-field';
 
