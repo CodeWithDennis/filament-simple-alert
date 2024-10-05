@@ -140,8 +140,7 @@ SimpleAlert::make()
 
 ### Screenshots
 
-![light](https://github.com/CodeWithDennis/filament-simple-alert/raw/main/resources/screenshots/light.png)
-![dark](https://github.com/CodeWithDennis/filament-simple-alert/raw/main/resources/screenshots/dark.png)
+![example](https://github.com/CodeWithDennis/filament-simple-alert/raw/main/resources/screenshots/example.png)
 
 ## Contributing
 
