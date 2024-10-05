@@ -140,10 +140,6 @@ SimpleAlert::make('example')
     ]),
 ```
 
-### Screenshots
-
-![example](https://github.com/CodeWithDennis/filament-simple-alert/raw/main/resources/screenshots/example.png)
-
 ## Contributing
 
 Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
