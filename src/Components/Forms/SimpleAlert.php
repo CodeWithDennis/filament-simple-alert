@@ -3,6 +3,7 @@
 namespace CodeWithDennis\SimpleAlert\Components\Forms;
 
 use Closure;
+use CodeWithDennis\SimpleAlert\Components\Concerns\HasBorder;
 use CodeWithDennis\SimpleAlert\Components\Concerns\HasColor;
 use CodeWithDennis\SimpleAlert\Components\Concerns\HasDescription;
 use CodeWithDennis\SimpleAlert\Components\Concerns\HasIcon;
@@ -19,6 +20,7 @@ class SimpleAlert extends Field
     use HasLink;
     use HasSimple;
     use HasTitle;
+    use HasBorder;
 
     protected string $view = 'filament-simple-alert::components.simple-alert-field';
 
