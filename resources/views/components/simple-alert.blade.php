@@ -1,8 +1,10 @@
 @props([
     'actions' => null,
+    'actionsVerticalAlignment' => 'center',
     'color' => null,
     'description' => null,
     'icon' => null,
+    'iconVerticalAlignment' => 'center',
     'link' => null,
     'linkBlank' => false,
     'linkLabel' => null,
@@ -23,7 +25,10 @@
         style="{{ $colors }}">
     <div class="flex">
         @if($icon)
-            <div class="flex-shrink-0 self-center">
+            <div @class([
+                'flex-shrink-0',
+                $iconVerticalAlignment === 'start' ? 'self-start' : 'self-center',
+            ])>
                 <x-filament::icon
                         icon="{{ $icon }}"
                         class="h-5 w-5 text-custom-400"
@@ -46,7 +51,10 @@
                 </div>
             @endif
             @if($link || $actions)
-                <div class="flex gap-x-3 items-center">
+                <div @class([
+                  'flex gap-x-3 items-center',
+                    $actionsVerticalAlignment === 'start' ? 'self-start' : 'self-center',
+                ])>
                     @if($link)
                         <p class="text-sm md:ml-6 md:mt-0 self-center">
                             <a href="{{ $link }}" {{ $linkBlank ? 'target="_blank"' : '' }} class="whitespace-nowrap font-medium text-custom-400 hover:text-custom-500">

@@ -20,6 +20,8 @@ class SimpleAlert extends Field
     use HasSimple;
     use HasTitle;
 
+    protected Closure|string|null $actionsVerticalAlignment = null;
+
     protected string $view = 'filament-simple-alert::components.simple-alert-field';
 
     public function actions(array|Closure $actions): static
@@ -27,6 +29,18 @@ class SimpleAlert extends Field
         $this->actions = $actions;
 
         return $this;
+    }
+
+    public function actionsVerticalAlignment(Closure|string $actionsVerticalAlignment = 'center'): static
+    {
+        $this->actionsVerticalAlignment = $actionsVerticalAlignment;
+
+        return $this;
+    }
+
+    public function getActionsVerticalAlignment(): ?string
+    {
+        return $this->evaluate($this->actionsVerticalAlignment);
     }
 
     protected function setUp(): void

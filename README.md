@@ -74,6 +74,17 @@ SimpleAlert::make('example')
     ->icon('heroicon-s-users')
 ```
 
+#### Icon Vertical Alignment
+
+You can change the vertical alignment of the icon by using the `iconVerticalAlignment` method.
+
+```php
+use CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert;
+
+SimpleAlert::make('example')
+    ->iconVerticalAlignment('start'), // possible values: start, center
+``` 
+
 ### Title
 
 You can add a title to the alert by using the `title` method.
@@ -117,6 +128,19 @@ SimpleAlert::make('example')
             ->color('info'),
     ]),
 ```
+
+#### Actions Vertical Alignment
+
+You can change the vertical alignment of the actions by using the `actionsVerticalAlignment` method.
+
+```php
+use CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert;
+use Filament\Forms\Components\Actions;
+
+SimpleAlert::make('example')
+    ->actionsVerticalAlignment('start'), // possible values: start, center
+```
+
 
 ### Example
 
