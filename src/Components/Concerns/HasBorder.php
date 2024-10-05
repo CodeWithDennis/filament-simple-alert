@@ -6,7 +6,7 @@ use Closure;
 
 trait HasBorder
 {
-    protected Closure|bool|null $border;
+    protected Closure|bool $border = false;
 
     public function border(Closure|bool $condition = false): static
     {
