@@ -8,5 +8,7 @@
             :link="$getLink()"
             :link-label="$getLinkLabel()"
             :link-blank="$getLinkBlank()"
+{{--            :actions="$getActions()" https://github.com/CodeWithDennis/filament-simple-alert/pull/20 --}}
+            :actions-vertical-alignment="$getActionsVerticalAlignment()"
     />
 </x-dynamic-component>
