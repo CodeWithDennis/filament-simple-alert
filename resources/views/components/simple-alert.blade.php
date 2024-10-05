@@ -30,7 +30,7 @@
                 />
             </div>
         @endif
-        <div class="ml-3 flex-1 md:flex md:justify-between">
+        <div class="ml-3 items-center flex-1 md:flex md:justify-between">
             @if($title || $description)
                 <div>
                     @if($title)
