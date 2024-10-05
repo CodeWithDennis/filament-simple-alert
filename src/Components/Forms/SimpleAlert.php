@@ -15,6 +15,7 @@ use Filament\Forms\Components\Field;
 
 class SimpleAlert extends Field
 {
+    use HasActionVerticalAlignment;
     use HasColor;
     use HasDescription;
     use HasIcon;
@@ -22,7 +23,6 @@ class SimpleAlert extends Field
     use HasLink;
     use HasSimple;
     use HasTitle;
-    use HasActionVerticalAlignment;
 
     protected string $view = 'filament-simple-alert::components.simple-alert-field';
 
