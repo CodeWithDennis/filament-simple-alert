@@ -7,5 +7,6 @@
             :link="$getLink()"
             :link-label="$getLinkLabel()"
             :link-blank="$getLinkBlank()"
+            :border="$getBorder()"
     />
 </x-dynamic-component>
