@@ -107,6 +107,16 @@ SimpleAlert::make('example')
     ->description('This is the description')
 ```
 
+### Border
+
+You can add a border to the alert by using the `border` method.
+
+```php
+use CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert;
+
+SimpleAlert::make('example')
+    ->border(true)
+```
 ### Actions
 
 You can also add actions to the alert by using the `actions` method. All regular action features are supported.

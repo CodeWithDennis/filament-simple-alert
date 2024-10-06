@@ -10,5 +10,6 @@
             :link-blank="$getLinkBlank()"
             :actions="$getActions()"
             :actions-vertical-alignment="$getActionsVerticalAlignment()"
+            :border="$getBorder()"
     />
 </x-dynamic-component>
