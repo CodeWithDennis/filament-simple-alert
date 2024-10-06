@@ -50,7 +50,7 @@
                 </div>
             @endif
             @if($link || $actions)
-                <div class="flex gap-x-3 items-center">
+                <div class="flex gap-x-3 items-center whitespace-nowrap">
                     @if($link)
                         <p class="text-sm md:ml-6 md:mt-0 self-center">
                             <a href="{{ $link }}" {{ $linkBlank ? 'target="_blank"' : '' }} class="whitespace-nowrap font-medium text-custom-400 hover:text-custom-500">
