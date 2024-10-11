@@ -16,6 +16,7 @@
     $colors = \Illuminate\Support\Arr::toCssStyles([
            get_color_css_variables($color, shades: [50, 100, 400, 500, 600, 700, 800]),
    ]);
+
 @endphp
 
 <div
@@ -27,14 +28,14 @@
         style="{{ $colors }}">
     <div class="flex">
         @if($icon)
-            <div class="flex-shrink-0 self-center">
+            <div class="flex-shrink-0 self-center mr-3">
                 <x-filament::icon
-                        icon="{{ $icon }}"
+                        :icon="$icon"
                         class="h-5 w-5 text-custom-400"
                 />
             </div>
         @endif
-        <div class="ml-3 items-center flex-1 md:flex md:justify-between">
+        <div class="items-center flex-1 md:flex md:justify-between">
             @if($title || $description)
                 <div>
                     @if($title)
