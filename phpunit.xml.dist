@@ -1,38 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.2/phpunit.xsd"
-    backupGlobals="false"
-    bootstrap="vendor/autoload.php"
-    colors="true"
-    processIsolation="false"
-    stopOnFailure="false"
-    executionOrder="random"
-    failOnWarning="true"
-    failOnRisky="true"
-    failOnEmptyTestSuite="true"
-    beStrictAboutOutputDuringTests="true"
-    cacheDirectory=".phpunit.cache"
-    backupStaticProperties="false"
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         backupGlobals="false"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.3/phpunit.xsd"
+         cacheDirectory=".phpunit.cache"
+         backupStaticProperties="false"
 >
     <testsuites>
-        <testsuite name="CodeWithDennis Test Suite">
-            <directory>tests</directory>
+        <testsuite name="FilamentSimpleAlert">
+            <directory suffix=".php">./tests/</directory>
         </testsuite>
     </testsuites>
-    <coverage>
-        <report>
-            <html outputDirectory="build/coverage"/>
-            <text outputFile="build/coverage.txt"/>
-            <clover outputFile="build/logs/clover.xml"/>
-        </report>
-    </coverage>
-    <logging>
-        <junit outputFile="build/report.junit.xml"/>
-    </logging>
     <source>
         <include>
             <directory suffix=".php">./src</directory>
         </include>
     </source>
+    <php>
+        <env name="APP_ENV" value="self-testing"/>
+        <env name="APP_KEY" value="base64:UlE7hpzgY3KFqx4yxA9BvR8n2tDm5iXcZ6WoVSOkj/M="/>
+        <env name="DB_CONNECTION" value="testing"/>
+    </php>
 </phpunit>

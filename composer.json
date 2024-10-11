@@ -33,13 +33,14 @@
     },
     "autoload": {
         "psr-4": {
-            "CodeWithDennis\\SimpleAlert\\": "src/",
-            "CodeWithDennis\\SimpleAlert\\Database\\Factories\\": "database/factories/"
+            "CodeWithDennis\\SimpleAlert\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "CodeWithDennis\\SimpleAlert\\Tests\\": "tests/"
+            "CodeWithDennis\\SimpleAlert\\Tests\\": "tests/src",
+            "CodeWithDennis\\SimpleAlert\\Tests\\Database\\Factories\\": "tests/database/factories"
+
         }
     },
     "scripts": {

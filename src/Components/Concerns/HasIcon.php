@@ -6,7 +6,7 @@ use Closure;
 
 trait HasIcon
 {
-    protected Closure|string|null $icon = null;
+    public Closure|string|null $icon = null;
 
     public function icon(Closure|string $icon): static
     {
