@@ -9,6 +9,7 @@
             :link-label="$getLinkLabel()"
             :link-blank="$getLinkBlank()"
             :actions-vertical-alignment="$getActionsVerticalAlignment()"
+            :actions="$getActions()"
             :border="$getBorder()"
     />
 </x-dynamic-component>
