@@ -3,6 +3,7 @@
 namespace CodeWithDennis\SimpleAlert\Components\Infolists;
 
 use Closure;
+use CodeWithDennis\SimpleAlert\Components\Concerns\HasBorder;
 use CodeWithDennis\SimpleAlert\Components\Concerns\HasColor;
 use CodeWithDennis\SimpleAlert\Components\Concerns\HasDescription;
 use CodeWithDennis\SimpleAlert\Components\Concerns\HasIcon;
@@ -13,6 +14,7 @@ use Filament\Infolists\Components\Entry;
 
 class SimpleAlert extends Entry
 {
+    use HasBorder;
     use HasColor;
     use HasDescription;
     use HasIcon;
