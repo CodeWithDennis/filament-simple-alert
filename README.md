@@ -64,14 +64,17 @@ SimpleAlert::make('example')
 
 ### Icon
 
-By default, all simple alerts will have an icon. If you would like to change the icon, you can use the `icon` method.
+By default, simple alerts come with an icon. For example, the `->danger()` method includes a `heroicon-s-x-circle` icon. If you want to use a different icon, you can use the icon method.
 
 ```php
 use CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert;
+//use Illuminate\Support\HtmlString;
 
 SimpleAlert::make('example')
     ->color('purple')
     ->icon('heroicon-s-users')
+//->icon(new HtmlString('🤓'))
+//->icon(new HtmlString(Blade::render('my-custom-icon-component')))
 ```
 
 #### Icon Vertical Alignment

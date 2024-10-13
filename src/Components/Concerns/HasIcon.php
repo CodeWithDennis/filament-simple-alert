@@ -3,19 +3,20 @@
 namespace CodeWithDennis\SimpleAlert\Components\Concerns;
 
 use Closure;
+use Illuminate\Contracts\Support\Htmlable;
 
 trait HasIcon
 {
-    protected Closure|string|null $icon = null;
+    protected string|Htmlable|Closure|null $icon = null;
 
-    public function icon(Closure|string $icon): static
+    public function icon(string|Htmlable|Closure|null $icon): static
     {
         $this->icon = $icon;
 
         return $this;
     }
 
-    public function getIcon(): ?string
+    public function getIcon(): string|Htmlable|null
     {
         return $this->evaluate($this->icon);
     }
