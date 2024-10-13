@@ -64,7 +64,7 @@ SimpleAlert::make('example')
 
 ### Icon
 
-If you would like to use an icon, you can use the `icon` method.
+By default, simple alerts come with an icon. For example, the `->danger()` method includes a `heroicon-s-x-circle` icon. If you want to use a different icon, you can use the icon method.
 
 ```php
 use CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert;
