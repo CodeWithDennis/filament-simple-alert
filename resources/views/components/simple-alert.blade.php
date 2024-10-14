@@ -28,7 +28,7 @@
         style="{{ $colors }}">
     <div class="flex">
         @if($icon)
-            <div class="flex-shrink-0 self-center mr-3">
+            <div class="flex-shrink-0 self-center ltr:mr-3 rtl:ml-3">
                 <x-filament::icon
                         :icon="$icon"
                         class="h-5 w-5 text-custom-400"
@@ -53,7 +53,7 @@
             @if($link || $actions)
                 <div class="flex gap-x-3 items-center whitespace-nowrap">
                     @if($link)
-                        <p class="text-sm md:ml-6 md:mt-0 self-center">
+                        <p class="text-sm ltr:md:ml-6 rtl:md:mr-6 md:mt-0 self-center">
                             <a href="{{ $link }}" {{ $linkBlank ? 'target="_blank"' : '' }} class="whitespace-nowrap font-medium text-custom-400 hover:text-custom-500">
                                 {{ $linkLabel }}
                                 <span aria-hidden="true"> &rarr;</span>
@@ -62,7 +62,7 @@
                     @endif
 
                     @if($actions)
-                        <div class="md:ml-6 gap-3 flex items-center justify-start">
+                        <div class="ltr:md:ml-6 rtl:md:mr-6 gap-3 flex items-center justify-start">
                             @foreach ($actions as $action)
                                 @if ($action->isVisible())
                                     {{ $action }}
