@@ -8,7 +8,7 @@ trait HasBorder
 {
     protected Closure|bool $border = false;
 
-    public function border(Closure|bool $condition = false): static
+    public function border(Closure|bool $condition = true): static
     {
         $this->border = $condition;
 
