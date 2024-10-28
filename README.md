@@ -118,7 +118,7 @@ You can add a border to the alert by using the `border` method.
 use CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert;
 
 SimpleAlert::make('example')
-    ->border(true)
+    ->border()
 ```
 ### Actions
 
