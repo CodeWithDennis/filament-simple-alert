@@ -31,7 +31,7 @@
     <div class="flex">
         @if($icon)
             <div @class([
-                'flex-shrink-0 self-center ltr:mr-3 rtl:ml-3',
+                'flex-shrink-0 ltr:mr-3 rtl:ml-3',
                 $iconVerticalAlignment === 'start' ? 'self-start' : 'self-center',
             ])>
                 <x-filament::icon
