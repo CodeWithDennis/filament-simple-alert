@@ -26,7 +26,7 @@
           'ring-1 ring-custom-100 dark:ring-white/10' => $border,
         ])
         style="{{ $colors }}">
-    <div class="flex">
+    <div class="flex items-center gap-4">
         @if($icon)
             <div class="flex-shrink-0 self-center ltr:mr-3 rtl:ml-3">
                 <x-filament::icon
@@ -35,7 +35,7 @@
                 />
             </div>
         @endif
-        <div class="items-center flex-1 md:flex md:justify-between">
+        <div class="items-center flex-1 md:flex md:justify-between justify-between">
             @if($title || $description)
                 <div>
                     @if($title)
