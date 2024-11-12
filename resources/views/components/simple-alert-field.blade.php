@@ -8,8 +8,8 @@
             :link="$getLink()"
             :link-label="$getLinkLabel()"
             :link-blank="$getLinkBlank()"
-            :actions="$getActions()"
             :actions-vertical-alignment="$getActionsVerticalAlignment()"
+            :actions="$getActions()"
             :border="$getBorder()"
     />
 </x-dynamic-component>
