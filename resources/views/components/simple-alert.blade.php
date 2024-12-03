@@ -60,28 +60,27 @@
                   'flex gap-x-3 items-center',
                     $actionsVerticalAlignment === 'start' ? 'self-start' : 'self-center',
                 ])>
-                    <div class="flex gap-x-3 items-center whitespace-nowrap">
-                        @if($link)
-                            <p class="text-sm ltr:md:ml-6 rtl:md:mr-6 md:mt-0 self-center">
-                                <a href="{{ $link }}" {{ $linkBlank ? 'target="_blank"' : '' }} class="whitespace-nowrap font-medium text-custom-400 hover:text-custom-500">
-                                    {{ $linkLabel }}
-                                    <span aria-hidden="true"> &rarr;</span>
-                                </a>
-                            </p>
-                        @endif
+                <div class="flex gap-x-3 items-center whitespace-nowrap">
+                    @if($link)
+                        <p class="text-sm ltr:md:ml-6 rtl:md:mr-6 md:mt-0 self-center">
+                            <a href="{{ $link }}" {{ $linkBlank ? 'target="_blank"' : '' }} class="whitespace-nowrap font-medium text-custom-400 hover:text-custom-500">
+                                {{ $linkLabel }}
+                                <span aria-hidden="true"> &rarr;</span>
+                            </a>
+                        </p>
+                    @endif
 
-                        @if($actions)
-                            <div class="ltr:md:ml-6 rtl:md:mr-6 gap-3 flex items-center justify-start">
-                                @foreach ($actions as $action)
-                                    @if ($action->isVisible())
-                                        {{ $action }}
-                                    @endif
-                                @endforeach
-                            </div>
-                        @endif
-                    </div>
+                    @if($actions)
+                        <div class="ltr:md:ml-6 rtl:md:mr-6 gap-3 flex items-center justify-start">
+                            @foreach ($actions as $action)
+                                @if ($action->isVisible())
+                                    {{ $action }}
+                                @endif
+                            @endforeach
+                        </div>
                     @endif
                 </div>
+            @endif
         </div>
     </div>
 </div>
