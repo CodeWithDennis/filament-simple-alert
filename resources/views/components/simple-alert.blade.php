@@ -21,13 +21,12 @@
 
 @endphp
 
-<div
-        x-data="{}"
-        @class([
-          'filament-simple-alert rounded-md bg-custom-50 p-4 dark:bg-gray-900 ',
-          'ring-1 ring-custom-100 dark:ring-white/10' => $border,
-        ])
-        style="{{ $colors }}">
+<div x-data="{}"
+     @class([
+       'filament-simple-alert rounded-md bg-custom-50 p-4 dark:bg-gray-900 ',
+       'ring-1 ring-custom-100 dark:ring-white/10' => $border,
+     ])
+     style="{{ $colors }}">
     <div class="flex">
         @if($icon)
             <div @class([
@@ -69,7 +68,6 @@
                                 </a>
                             </p>
                         @endif
-
                         @if($actions)
                             <div class="ltr:md:ml-6 rtl:md:mr-6 gap-3 flex items-center justify-start">
                                 @foreach ($actions as $action)
@@ -80,8 +78,8 @@
                             </div>
                         @endif
                     </div>
-                    @endif
                 </div>
+            @endif
         </div>
     </div>
 </div>
