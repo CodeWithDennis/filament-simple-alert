@@ -16,21 +16,20 @@
     use function Filament\Support\get_color_css_variables;
 
     $colors = \Illuminate\Support\Arr::toCssStyles([
-           get_color_css_variables($color, shades: [50, 100, 400, 500, 600, 700, 800]),
+           get_color_css_variables($color, shades: [50, 100, 400, 500, 700, 800]),
    ]);
-
 @endphp
 
 <div x-data="{}"
      @class([
-       'filament-simple-alert rounded-md bg-custom-50 p-4 dark:bg-gray-900 ',
-       'ring-1 ring-custom-100 dark:ring-white/10' => $border,
+       'filament-simple-alert rounded-md bg-custom-50 p-4 dark:bg-custom-400/10',
+       'ring-1 ring-custom-100 dark:ring-custom-500/70' => $border,
      ])
      style="{{ $colors }}">
-    <div class="flex">
+    <div class="flex gap-3">
         @if($icon)
             <div @class([
-                'flex-shrink-0 ltr:mr-3 rtl:ml-3',
+                'flex-shrink-0',
                 $iconVerticalAlignment === 'start' ? 'self-start' : 'self-center',
             ])>
                 <x-filament::icon
@@ -39,9 +38,9 @@
                 />
             </div>
         @endif
-        <div class="items-center flex-1 md:flex md:justify-between">
+        <div class="items-center flex-1 md:flex md:justify-between space-y-3 md:space-y-0 md:gap-3">
             @if($title || $description)
-                <div>
+                <div class="space-y-0.5">
                     @if($title)
                         <p class="text-sm font-medium text-custom-800 dark:text-white">
                             {{ $title }}
@@ -56,12 +55,12 @@
             @endif
             @if($link || $actions)
                 <div @class([
-                  'flex gap-x-3 items-center',
+                  'flex items-center gap-3',
                     $actionsVerticalAlignment === 'start' ? 'self-start' : 'self-center',
                 ])>
-                    <div class="flex gap-x-3 items-center whitespace-nowrap">
+                    <div class="flex items-center whitespace-nowrap gap-3">
                         @if($link)
-                            <p class="text-sm ltr:md:ml-6 rtl:md:mr-6 md:mt-0 self-center">
+                            <p class="text-sm md:mt-0 self-center">
                                 <a href="{{ $link }}" {{ $linkBlank ? 'target="_blank"' : '' }} class="whitespace-nowrap font-medium text-custom-400 hover:text-custom-500">
                                     {{ $linkLabel }}
                                     <span aria-hidden="true"> &rarr;</span>
@@ -69,7 +68,7 @@
                             </p>
                         @endif
                         @if($actions)
-                            <div class="ltr:md:ml-6 rtl:md:mr-6 gap-3 flex items-center justify-start">
+                            <div class="gap-3 flex items-center justify-start">
                                 @foreach ($actions as $action)
                                     @if ($action->isVisible())
                                         {{ $action }}
