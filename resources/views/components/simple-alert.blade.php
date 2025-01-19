@@ -38,7 +38,7 @@
                 />
             </div>
         @endif
-        <div class="items-center flex-1 md:flex md:justify-between space-y-3 md:gap-3">
+        <div class="items-center flex-1 md:flex md:justify-between space-y-3 md:space-y-0 md:gap-3">
             @if($title || $description)
                 <div class="space-y-0.5">
                     @if($title)
