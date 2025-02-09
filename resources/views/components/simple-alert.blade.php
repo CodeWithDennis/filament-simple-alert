@@ -21,10 +21,10 @@
 @endphp
 
 <div x-data="{}"
-     @class([
-       'filament-simple-alert rounded-md bg-custom-50 p-4 dark:bg-custom-400/10',
-       'ring-1 ring-custom-100 dark:ring-custom-500/70' => $border,
-     ])
+     {{ $attributes->class([
+         'filament-simple-alert rounded-md bg-custom-50 p-4 dark:bg-custom-400/10',
+         'ring-1 ring-custom-100 dark:ring-custom-500/70' => $border,
+     ]) }}
      style="{{ $colors }}">
     <div class="flex gap-3">
         @if($icon)
