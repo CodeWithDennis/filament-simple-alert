@@ -79,7 +79,7 @@ SimpleAlert::make('example')
 
 #### Icon Animation
 
-You can add animation to the icon by passing the animation type as the second parameter to the `icon` method. Make sure to use the `IconAnimation` enum for the animation type.
+You can add animation to the icon by passing the animation type as the second parameter to the `icon` method. You can use the `IconAnimation` enum to specify the animation type. The available animations are `Spin`, `Pulse`, and `Bounce`.
 
 ```php
 use CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert;
