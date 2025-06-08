@@ -77,6 +77,18 @@ SimpleAlert::make('example')
 //->icon(new HtmlString(Blade::render('my-custom-icon-component')))
 ```
 
+#### Icon Animation
+
+You can add animation to the icon by passing the animation type as the second parameter to the `icon` method. Make sure to use the `IconAnimation` enum for the animation type.
+
+```php
+use CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert;
+use CodeWithDennis\SimpleAlert\Enums\IconAnimation;
+
+SimpleAlert::make('example')
+    ->icon('heroicon-s-arrow-path', IconAnimation::Spin)
+```
+
 #### Icon Vertical Alignment
 
 You can change the vertical alignment of the icon by using the `iconVerticalAlignment` method.
