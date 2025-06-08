@@ -2,6 +2,7 @@
     <x-filament-simple-alert::simple-alert
             :icon="$getIcon()"
             :icon-vertical-alignment="$getIconVerticalAlignment()"
+            :icon-animation="$getIconAnimation()"
             :color="$getColor()"
             :title="$getTitle()"
             :description="$getDescription()"

@@ -6,6 +6,7 @@
     'description' => null,
     'icon' => null,
     'iconVerticalAlignment' => 'center',
+    'iconAnimation' => null,
     'link' => null,
     'linkBlank' => false,
     'linkLabel' => null,
@@ -34,7 +35,7 @@
             ])>
                 <x-filament::icon
                         :icon="$icon"
-                        class="h-5 w-5 text-custom-400"
+                        class="h-5 w-5 text-custom-400 {{ $iconAnimation }}"
                 />
             </div>
         @endif
