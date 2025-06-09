@@ -22,7 +22,7 @@ trait HasIcon
 
     public function getIconAnimation(): ?string
     {
-        return $this->evaluate($this->iconAnimation?->value ?? null);
+        return $this->evaluate($this->iconAnimation)?->value ?? null;
     }
 
     public function getIcon(): string
