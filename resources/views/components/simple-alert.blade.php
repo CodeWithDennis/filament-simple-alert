@@ -19,6 +19,11 @@
     $colors = \Illuminate\Support\Arr::toCssStyles([
            get_color_css_variables($color, shades: [50, 100, 400, 500, 700, 800]),
    ]);
+
+    $iconClasses = \Illuminate\Support\Arr::toCssClasses([
+        'h-5 w-5 text-custom-400',
+        $iconAnimation,
+    ]);
 @endphp
 
 <div x-data="{}"
@@ -35,7 +40,7 @@
             ])>
                 <x-filament::icon
                         :icon="$icon"
-                        class="h-5 w-5 text-custom-400 {{ $iconAnimation }}"
+                        :class="$iconClasses"
                 />
             </div>
         @endif
