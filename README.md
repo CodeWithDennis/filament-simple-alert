@@ -23,6 +23,19 @@ Make sure you add the following to your `tailwind.config.js file.
 './vendor/codewithdennis/filament-simple-alert/resources/**/*.blade.php',
 ```
 
+Also, add the following safelist configuration to your `tailwind.config.js` to ensure animation classes are not purged:
+
+```js
+module.exports = {
+    // ... other config
+    safelist: [
+        'animate-spin',
+        'animate-pulse',
+        'animate-bounce'
+    ],
+}
+```
+
 ### Custom Theme
 
 You will need to [create a custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) for the styles to be applied correctly.
@@ -75,6 +88,18 @@ SimpleAlert::make('example')
     ->icon('heroicon-s-users')
 //->icon(new HtmlString('🤓'))
 //->icon(new HtmlString(Blade::render('my-custom-icon-component')))
+```
+
+#### Icon Animation
+
+You can add animation to the icon by passing the animation type as the second parameter to the `icon` method. Make sure to use the `IconAnimation` enum for the animation type.
+
+```php
+use CodeWithDennis\SimpleAlert\Components\Infolists\SimpleAlert;
+use CodeWithDennis\SimpleAlert\Components\Enums\IconAnimation;
+
+SimpleAlert::make('example')
+    ->icon('heroicon-s-arrow-path', IconAnimation::Spin)
 ```
 
 #### Icon Vertical Alignment
