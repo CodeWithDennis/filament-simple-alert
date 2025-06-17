@@ -1,6 +1,6 @@
 <?php
 
-namespace CodeWithDennis\SimpleAlert\Components\Infolists;
+namespace CodeWithDennis\SimpleAlert\Components;
 
 use Closure;
 use CodeWithDennis\SimpleAlert\Components\Concerns\HasActionVerticalAlignment;
@@ -12,9 +12,9 @@ use CodeWithDennis\SimpleAlert\Components\Concerns\HasIconVerticalAlignment;
 use CodeWithDennis\SimpleAlert\Components\Concerns\HasLink;
 use CodeWithDennis\SimpleAlert\Components\Concerns\HasSimple;
 use CodeWithDennis\SimpleAlert\Components\Concerns\HasTitle;
-use Filament\Infolists\Components\Entry;
+use Filament\Schemas\Components\Component;
 
-class SimpleAlert extends Entry
+class SimpleAlert extends Component
 {
     use HasActionVerticalAlignment;
     use HasBorder;
@@ -26,19 +26,17 @@ class SimpleAlert extends Entry
     use HasSimple;
     use HasTitle;
 
-    protected string $view = 'filament-simple-alert::components.simple-alert-entry';
+    protected string $view = 'filament-simple-alert::components.simple-alert';
+
+    public static function make(): static
+    {
+        return app(static::class);
+    }
 
     public function actions(array|Closure $actions): static
     {
         $this->actions = $actions;
 
         return $this;
-    }
-
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        $this->hiddenLabel();
     }
 }
