@@ -20,28 +20,16 @@ You can install the package via composer:
 composer require codewithdennis/filament-simple-alert
 ```
 
-Make sure you add the following to your `tailwind.config.js file.
-
-```bash
-'./vendor/codewithdennis/filament-simple-alert/resources/**/*.blade.php',
-```
-
-Also, add the following safelist configuration to your `tailwind.config.js` to ensure animation classes are not purged:
-
-```js
-module.exports = {
-    // ... other config
-    safelist: [
-        'animate-spin',
-        'animate-pulse',
-        'animate-bounce'
-    ],
-}
-```
-
 ### Custom Theme
 
 You will need to [create a custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) for the styles to be applied correctly.
+
+Make sure you add the following to your `theme.css` file.
+
+```bash
+@source '../../../../vendor/codewithdennis/filament-simple-alert/resources/**/*.blade.php';
+@source inline('animate-{spin,pulse,bounce}');
+```
 
 ## Usage
 
