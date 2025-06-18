@@ -26,6 +26,13 @@ class SimpleAlert extends Field
 
     protected string $view = 'filament-simple-alert::components.simple-alert';
 
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->dehydrated(false);
+    }
+
     public function actions(array|Closure $actions): static
     {
         $this->actions = $actions;
