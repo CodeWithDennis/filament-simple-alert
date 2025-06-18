@@ -33,23 +33,17 @@ Make sure you add the following to your `theme.css` file.
 
 ## Usage
 
-The alerts can be used in your `infolists` or `forms`, make sure you pick the right component.
+Make sure to import the `SimpleAlert` component at the top of your file:
 
 ```php
 use CodeWithDennis\SimpleAlert\Components\SimpleAlert;
-```
+````
+
+### Predefined Alerts
+
+There are 4 types predefined of simple alerts: `danger`, `info`, `success`, and `warning`.
 
 ```php
-use CodeWithDennis\SimpleAlert\Components\SimpleAlert;
-```
-
-### Simple Alerts
-
-There are 4 types of simple alerts: `danger`, `info`, `success`, and `warning`.
-
-```php
-use CodeWithDennis\SimpleAlert\Components\SimpleAlert;
-
 SimpleAlert::make('example')
     ->danger()
     ->info()
@@ -60,8 +54,6 @@ SimpleAlert::make('example')
 If you would like to use a [different color](https://filamentphp.com/docs/3.x/support/colors), you can use the `color` method.
 
 ```php
-use CodeWithDennis\SimpleAlert\Components\SimpleAlert;
-
 SimpleAlert::make('example')
     ->color('purple')
 ```
@@ -71,14 +63,17 @@ SimpleAlert::make('example')
 By default, simple alerts come with an icon. For example, the `->danger()` method includes a `heroicon-s-x-circle` icon. If you want to use a different icon, you can use the icon method.
 
 ```php
-use CodeWithDennis\SimpleAlert\Components\SimpleAlert;
-//use Illuminate\Support\HtmlString;
-
 SimpleAlert::make('example')
     ->color('purple')
     ->icon('heroicon-s-users')
-//->icon(new HtmlString('🤓'))
-//->icon(new HtmlString(Blade::render('my-custom-icon-component')))
+```
+
+Or you can use a custom icon by passing an HTML string or a Blade component to the `icon` method.
+
+```php
+SimpleAlert::make('example')
+    ->icon(new HtmlString('🤓'))
+    ->icon(new HtmlString(Blade::render('my-custom-icon-component')))
 ```
 
 #### Icon Animation
@@ -86,7 +81,6 @@ SimpleAlert::make('example')
 You can add animation to the icon by passing the animation type as the second parameter to the `icon` method. Make sure to use the `IconAnimation` enum for the animation type.
 
 ```php
-use CodeWithDennis\SimpleAlert\Components\SimpleAlert;
 use CodeWithDennis\SimpleAlert\Components\Enums\IconAnimation;
 
 SimpleAlert::make('example')
@@ -98,8 +92,6 @@ SimpleAlert::make('example')
 You can change the vertical alignment of the icon by using the `iconVerticalAlignment` method.
 
 ```php
-use CodeWithDennis\SimpleAlert\Components\SimpleAlert;
-
 SimpleAlert::make('example')
     ->iconVerticalAlignment('start'), // possible values: start, center
 ``` 
@@ -109,8 +101,6 @@ SimpleAlert::make('example')
 You can add a title to the alert by using the `title` method.
 
 ```php
-use CodeWithDennis\SimpleAlert\Components\SimpleAlert;
-
 SimpleAlert::make('example')
     ->title('Hoorraayy! Your request has been approved! 🎉')
 ```
@@ -120,8 +110,6 @@ SimpleAlert::make('example')
 You can add a description to the alert by using the `description` method.
 
 ```php
-use CodeWithDennis\SimpleAlert\Components\SimpleAlert;
-
 SimpleAlert::make('example')
     ->description('This is the description')
 ```
@@ -131,8 +119,6 @@ SimpleAlert::make('example')
 You can add a border to the alert by using the `border` method.
 
 ```php
-use CodeWithDennis\SimpleAlert\Components\SimpleAlert;
-
 SimpleAlert::make('example')
     ->border()
 ```
@@ -141,8 +127,7 @@ SimpleAlert::make('example')
 You can also add actions to the alert by using the `actions` method. All regular action features are supported.
 
 ```php
-use CodeWithDennis\SimpleAlert\Components\SimpleAlert;
-use Filament\Forms\Components\Actions;
+use Filament\Actions\Action;
 
 SimpleAlert::make('example')
     ->columnSpanFull()
@@ -163,8 +148,7 @@ SimpleAlert::make('example')
 You can change the vertical alignment of the actions by using the `actionsVerticalAlignment` method.
 
 ```php
-use CodeWithDennis\SimpleAlert\Components\SimpleAlert;
-use Filament\Forms\Components\Actions;
+use Filament\Actions\Action;
 
 SimpleAlert::make('example')
     ->actionsVerticalAlignment('start'), // possible values: start, center
@@ -174,8 +158,7 @@ SimpleAlert::make('example')
 ### Example
 
 ```php
-use CodeWithDennis\SimpleAlert\Components\SimpleAlert;
-use Filament\Forms\Components\Actions;
+use Filament\Actions\Action;
 
 SimpleAlert::make('example')
     ->success()
