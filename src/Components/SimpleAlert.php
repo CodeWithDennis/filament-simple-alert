@@ -11,9 +11,9 @@ use CodeWithDennis\SimpleAlert\Components\Concerns\HasIcon;
 use CodeWithDennis\SimpleAlert\Components\Concerns\HasIconVerticalAlignment;
 use CodeWithDennis\SimpleAlert\Components\Concerns\HasSimple;
 use CodeWithDennis\SimpleAlert\Components\Concerns\HasTitle;
-use Filament\Schemas\Components\Component;
+use Filament\Forms\Components\Field;
 
-class SimpleAlert extends Component
+class SimpleAlert extends Field
 {
     use HasActionVerticalAlignment;
     use HasBorder;
@@ -25,11 +25,6 @@ class SimpleAlert extends Component
     use HasTitle;
 
     protected string $view = 'filament-simple-alert::components.simple-alert';
-
-    public static function make(): static
-    {
-        return app(self::class);
-    }
 
     public function actions(array|Closure $actions): static
     {
