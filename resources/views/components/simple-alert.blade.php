@@ -7,9 +7,6 @@
     'icon' => null,
     'iconVerticalAlignment' => 'center',
     'iconAnimation' => null,
-    'link' => null,
-    'linkBlank' => false,
-    'linkLabel' => null,
     'title' => null,
 ])
 
@@ -59,20 +56,12 @@
                     @endif
                 </div>
             @endif
-            @if($getLink() || $getActions())
+            @if($getActions())
                 <div @class([
                   'flex items-center gap-3',
                     $getActionsVerticalAlignment() === 'start' ? 'self-start' : 'self-center',
                 ])>
                     <div class="flex items-center whitespace-nowrap gap-3">
-                        @if($getLink())
-                            <p class="text-sm md:mt-0 self-center">
-                                <a href="{{ $getLink() }}" {{ $getLinkBlank() ? 'target="_blank"' : '' }} class="whitespace-nowrap font-medium text-custom-400 hover:text-custom-500">
-                                    {{ $getLinkLabel() }}
-                                    <span aria-hidden="true"> →</span>
-                                </a>
-                            </p>
-                        @endif
                         @if($getActions())
                             <div class="gap-3 flex items-center justify-start">
                                 @foreach ($getActions() as $action)

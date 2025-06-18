@@ -9,7 +9,6 @@ use CodeWithDennis\SimpleAlert\Components\Concerns\HasColor;
 use CodeWithDennis\SimpleAlert\Components\Concerns\HasDescription;
 use CodeWithDennis\SimpleAlert\Components\Concerns\HasIcon;
 use CodeWithDennis\SimpleAlert\Components\Concerns\HasIconVerticalAlignment;
-use CodeWithDennis\SimpleAlert\Components\Concerns\HasLink;
 use CodeWithDennis\SimpleAlert\Components\Concerns\HasSimple;
 use CodeWithDennis\SimpleAlert\Components\Concerns\HasTitle;
 use Filament\Schemas\Components\Component;
@@ -22,7 +21,6 @@ class SimpleAlert extends Component
     use HasDescription;
     use HasIcon;
     use HasIconVerticalAlignment;
-    use HasLink;
     use HasSimple;
     use HasTitle;
 
@@ -30,7 +28,7 @@ class SimpleAlert extends Component
 
     public static function make(): static
     {
-        return app(static::class);
+        return app(self::class);
     }
 
     public function actions(array|Closure $actions): static
