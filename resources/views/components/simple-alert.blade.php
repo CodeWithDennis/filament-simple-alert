@@ -1,15 +1,3 @@
-@props([
-    'actions' => null,
-    'actionsVerticalAlignment' => 'center',
-    'border' => false,
-    'color' => null,
-    'description' => null,
-    'icon' => null,
-    'iconVerticalAlignment' => 'center',
-    'iconAnimation' => null,
-    'title' => null,
-])
-
 @php
     use function Filament\Support\get_color_css_variables;
 
