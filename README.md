@@ -19,7 +19,7 @@ providing clear and concise notifications.
 You can install the package via composer:
 
 ```bash
-composer require codewithdennis/filament-simple-alert
+composer require codewithdennis/filament-simple-alert:4.x
 ```
 
 ### Custom Theme
