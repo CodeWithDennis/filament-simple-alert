@@ -20,7 +20,7 @@
     <div class="flex gap-3">
         @if($getIcon())
             <div @class([
-                'flex-shrink-0',
+                'shrink-0',
                 $getIconVerticalAlignment() === 'start' ? 'self-start' : 'self-center',
             ])>
                 <x-filament::icon
