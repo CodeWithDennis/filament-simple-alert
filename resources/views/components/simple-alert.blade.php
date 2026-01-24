@@ -53,9 +53,9 @@
                         </p>
                     @endif
                     @if($description)
-                        <p class="text-sm text-custom-700 dark:text-white">
+                        <div class="block text-sm text-custom-700 dark:text-white">
                             {{ $description }}
-                        </p>
+                        </div>
                     @endif
                 </div>
             @endif
