@@ -9,6 +9,11 @@
         'h-5 w-5 text-custom-400',
         $getIconAnimation(),
     ]);
+
+    $actions = $getActions();
+    $description = $getDescription();
+    $icon = $getIcon();
+    $title = $getTitle();
 @endphp
 
 <div x-data="{}"
@@ -18,41 +23,41 @@
      ]) }}
      style="{{ $colors }}">
     <div class="flex gap-3">
-        @if($getIcon())
+        @if($icon)
             <div @class([
                 'flex-shrink-0',
                 $getIconVerticalAlignment() === 'start' ? 'self-start' : 'self-center',
             ])>
                 <x-filament::icon
-                    :icon="$getIcon()"
+                    :icon="$icon"
                     :class="$iconClasses"
                 />
             </div>
         @endif
         <div class="items-center flex-1 md:flex md:justify-between space-y-3 md:space-y-0 md:gap-3">
-            @if($getTitle() || $getDescription())
+            @if($title || $description)
                 <div class="space-y-0.5">
-                    @if($getTitle())
+                    @if($title)
                         <p class="text-sm font-medium text-custom-800 dark:text-white">
-                            {{ $getTitle() }}
+                            {{ $title }}
                         </p>
                     @endif
-                    @if($getDescription())
+                    @if($description)
                         <div class="block text-sm text-custom-700 dark:text-white">
-                            {{ $getDescription() }}
+                            {{ $description }}
                         </div>
                     @endif
                 </div>
             @endif
-            @if($getActions())
+            @if($actions)
                 <div @class([
                   'flex items-center gap-3',
                     $getActionsVerticalAlignment() === 'start' ? 'self-start' : 'self-center',
                 ])>
                     <div class="flex items-center whitespace-nowrap gap-3">
-                        @if($getActions())
+                        @if($actions)
                             <div class="gap-3 flex items-center justify-start">
-                                @foreach ($getActions() as $action)
+                                @foreach ($actions as $action)
                                     @if ($action->isVisible())
                                         {{ $action }}
                                     @endif
