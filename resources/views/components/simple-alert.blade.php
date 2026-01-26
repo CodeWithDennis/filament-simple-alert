@@ -3,7 +3,7 @@
     'border' => false,
     'icon' => null,
     'iconAnimation' => null,
-    'iconVerticalAlignment' => 'start',
+    'iconVerticalAlignment' => 'center',
     'title' => null,
     'description' => null,
     'actions' => null,
