@@ -6,6 +6,8 @@
     'iconVerticalAlignment' => 'start',
     'title' => null,
     'description' => null,
+    'actions' => null,
+    'actionsVerticalAlignment' => 'center',
 ])
 
 @php
@@ -18,8 +20,8 @@
     $iconVerticalAlignment = value($getIconVerticalAlignment ?? $iconVerticalAlignment);
     $title = value($getTitle ?? $title);
     $description = value($getDescription ?? $description);
-    $actions = value($getActions ?? null);
-    $actionsVerticalAlignment = value($getActionsVerticalAlignment ?? 'center');
+    $actions = value($getActions ?? $actions);
+    $actionsVerticalAlignment = value($getActionsVerticalAlignment ?? $actionsVerticalAlignment);
 
     $colors = \Illuminate\Support\Arr::toCssStyles([
            get_color_css_variables($color, shades: [50, 100, 400, 500, 700, 800]),
