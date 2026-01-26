@@ -11,9 +11,6 @@ providing clear and concise notifications.
 
 ![Simple Alert](https://github.com/CodeWithDennis/filament-simple-alert/raw/4.x/resources/screenshots/thumbnail.png)
 
-> [!CAUTION]
-> **Filament 4** is currently in beta — use it cautiously in production.
-
 ## Installation
 
 You can install the package via composer:
