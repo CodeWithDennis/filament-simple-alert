@@ -4,28 +4,31 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/codewithdennis/filament-simple-alert/pint.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/codewithdennis/filament-simple-alert/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/codewithdennis/filament-simple-alert.svg?style=flat-square)](https://packagist.org/packages/codewithdennis/filament-simple-alert)
 
-If you're using Filament `3.x`, check out the compatible version of this [package here](https://github.com/CodeWithDennis/filament-simple-alert/tree/3.x).
+If you're using Filament `3.x` or `4.x`, check out the compatible version of this package for:
+
+- [`Filament 3.x`](https://github.com/CodeWithDennis/filament-simple-alert/tree/3.x)
+- [`Filament 4.x`](https://github.com/CodeWithDennis/filament-simple-alert/tree/4.x)
 
 This package offers a straightforward and easy-to-use alert component for your Filament application. It allows you to quickly implement customizable alert messages, enhancing the user experience by
 providing clear and concise notifications.
 
-![Simple Alert](https://github.com/CodeWithDennis/filament-simple-alert/raw/4.x/resources/screenshots/thumbnail.png)
+![Simple Alert](https://github.com/CodeWithDennis/filament-simple-alert/raw/5.x/resources/screenshots/thumbnail.png)
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require codewithdennis/filament-simple-alert:4.x
+composer require codewithdennis/filament-simple-alert:5.x
 ```
 
 ### Custom Theme
 
-You will need to [create a custom theme](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) for the styles to be applied correctly.
+You will need to [create a custom theme](https://filamentphp.com/docs/5.x/styling/overview#creating-a-custom-theme) for the styles to be applied correctly.
 
 Make sure you add the following to your `theme.css` file.
 
-```bash
+```css
 @source '../../../../vendor/codewithdennis/filament-simple-alert/resources/**/*.blade.php';
 @source inline('animate-{spin,pulse,bounce}');
 ```
@@ -36,7 +39,7 @@ Make sure to import the `SimpleAlert` component at the top of your file:
 
 ```php
 use CodeWithDennis\SimpleAlert\Components\SimpleAlert;
-````
+```
 
 ### Predefined Alerts
 
@@ -50,7 +53,7 @@ SimpleAlert::make('example')
     ->warning()
 ```
 
-If you would like to use a [different color](https://filamentphp.com/docs/3.x/support/colors), you can use the `color` method.
+If you would like to use a [different color](https://filamentphp.com/docs/5.x/styling/colors), you can use the `color` method.
 
 ```php
 SimpleAlert::make('example')
