@@ -9,7 +9,8 @@ If you're using Filament `3.x`, check out the compatible version of this [packag
 This package offers a straightforward and easy-to-use alert component for your Filament application. It allows you to quickly implement customizable alert messages, enhancing the user experience by
 providing clear and concise notifications.
 
-![Simple Alert](https://github.com/CodeWithDennis/filament-simple-alert/raw/4.x/resources/screenshots/thumbnail.png)
+<img width="3840" height="2160" alt="filament-simple-alert-light-mint-3840x2160" src="https://github.com/user-attachments/assets/446bb6d3-8043-4b72-99d3-71cc93577e4f" />
+
 
 ## Installation
 
